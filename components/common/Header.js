@@ -17,8 +17,8 @@ export default function Header () {
       </Link>
       LOGO
       <Navigation />
-      <Link href="/" className={Styles.myaccount}>
-        <a title="My Account">
+      <Link href="/" >
+        <a className={Styles.myaccount} title="My Account">
           <FontAwesomeIcon icon={faUserCircle} className={Styles.icon} />
         </a>
       </Link>

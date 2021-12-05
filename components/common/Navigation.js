@@ -4,18 +4,18 @@ import Styles from './Navigation.module.scss'
 
 export default function Navigation ({ active }) {
   return (
-    <nav class={Styles.navigation}>
+    <nav className={Styles.navigation}>
         <Link href="/">
-          <a class={Styles.link}>Dashboard</a>
+          <a className={Styles.link}>Dashboard</a>
         </Link>
         <Link href="/">
-          <a class={Styles.link}>My Cards</a>
+          <a className={Styles.link}>My Cards</a>
         </Link>
         <Link href="/">
-          <a class={Styles.link}>Market</a>
+          <a className={Styles.link}>Market</a>
         </Link>
         <Link href="/">
-          <a class={Styles.link}>Support</a>
+          <a className={Styles.link}>Support</a>
         </Link>
     </nav>
   )

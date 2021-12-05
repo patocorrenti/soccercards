@@ -14,12 +14,22 @@
   }
 
   @media screen and (min-width: $desktop) {
+    align-items: center;
     background-color: transparent;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     height: auto;
     position: static;
+
+    .link {
+      .icon {
+        font-size: 3rem;
+      }
+      .legend {
+        display: none;
+      }
+    }
   }
 }
 

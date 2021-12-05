@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
@@ -15,7 +16,11 @@ export default function Header () {
           <FontAwesomeIcon icon={faBars} className={Styles.icon} />
         </a>
       </Link>
-      LOGO
+      <Link href="/">
+        <a className={Styles.logo}>
+          <Image src="/soccercards-logo.png" width={168} height={168} alt="Soccer Cards"/>
+        </a>
+      </Link>
       <Navigation />
       <Link href="/" >
         <a className={Styles.myaccount} title="My Account">

@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.layout {
+
+  @media screen and (min-width: $desktop) {
+
+    .content {
+      margin-left: 70px;
+      flex-grow: 1;
+    }
+  }
+
+}

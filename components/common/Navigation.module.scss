@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.navigation {
+  background-color: $color-site;
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+
+  .link {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
+    position: static;
+  }
+}
+

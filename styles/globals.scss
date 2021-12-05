@@ -1,0 +1,28 @@
+@import 'variables';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $color-body-background;
+  color: $color-normal-text;
+  font-family: $text-font;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $title-font;
+  font-weight: bolder;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

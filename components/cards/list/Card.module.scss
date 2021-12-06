@@ -8,36 +8,6 @@
   padding: 15px;
   width: auto;
 
-  .image {
-    position: relative;
-
-    a {
-      display: block;
-      line-height: 0;
-
-      img {
-        display: block;
-        transition-duration: 4s;
-      }
-      &:hover {
-        img {
-          transform: scale(1.2);
-        }
-      }
-    }
-    .colorsec {
-      height: 4px;
-    }
-    .colorpri {
-      height: 10px;
-    }
-    .logo {
-      position: absolute;
-      z-index: 1;
-      right: 0;
-      bottom: -30px;
-    }
-  }
   .data {
     background-color: #EEEEEE;
 

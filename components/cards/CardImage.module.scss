@@ -1,0 +1,31 @@
+.image {
+  position: relative;
+  display: block;
+  line-height: 0;
+
+  a {
+    display: block;
+
+    img {
+      display: block;
+      transition-duration: 4s;
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .colorsec {
+    height: 4px;
+  }
+  .colorpri {
+    height: 10px;
+  }
+  .logo {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -30px;
+  }
+}

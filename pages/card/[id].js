@@ -14,7 +14,12 @@ const CardDetail = ( ) => {
   ]
 
   return (
-    <Layout title={card.name} showTitle="" breadCrumb={breadCrumb} color={card?.team?.color_2}>
+    <Layout
+      breadCrumb={breadCrumb}
+      color={card?.team?.color_2}
+      showTitle=""
+      title={card.name}
+    >
       <SoccerCardDetail card={ card } />
     </Layout>
   )

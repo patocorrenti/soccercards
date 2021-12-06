@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
+import CardImage from '../CardImage'
 import CardEmv from './CardEmv'
 
 import Styles from './Card.module.scss'
@@ -15,16 +15,7 @@ export default function SoccerCard ({ card, id }) {
 
   return (
     <article className={Styles.card}>
-      <div className={Styles.image}>
-        <div className={Styles.colorsec} style={secondaryColor}></div>
-        <a href={cardLink}>
-          <Image src={image} width={290} height={214} alt="Player picture"/>
-        </a>
-        <div className={Styles.colorpri} style={primaryColor}></div>
-        <div className={Styles.logo}>
-          { teamLogo && <Image src={teamLogo} width={70} height={70} alt="Team logo"/> }
-        </div>
-      </div>
+      <CardImage card={card} id={id} />
       <div className={Styles.data}>
         <header className={Styles.header}>
           <h2>

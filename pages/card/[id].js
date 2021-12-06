@@ -8,9 +8,13 @@ const CardDetail = ( ) => {
   const router = useRouter()
   const { id } = router.query
   const card = ALL_CARDS[id] || {}
+  const breadCrumb = [
+    ['My Cards', '/'],
+    [card.name, ''],
+  ]
 
   return (
-    <Layout title={card.name} showTitle="">
+    <Layout title={card.name} showTitle="" breadCrumb={breadCrumb}>
       <SoccerCardDetail card={ card } />
     </Layout>
   )

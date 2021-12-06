@@ -1,5 +1,5 @@
 import Layout from '../components/common/Layout'
-import SoccerCardsList from '../components/cards/List'
+import SoccerCardsList from '../components/cards/list/List'
 import ALL_CARDS from '../lib/allCards'
 
 const MyCards = ( ) => {

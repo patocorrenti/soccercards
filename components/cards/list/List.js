@@ -5,7 +5,7 @@ export default function SoccerCardsList ({ cards = [] }) {
   return (
     cards.length
       ? <ul className={Styles.list}>
-          { cards.map(card => <li><SoccerCard card={card}/></li> ) }
+          { cards.map( ( card, index ) => <li><SoccerCard card={card} id={index}/></li> ) }
         </ul>
       : <div>There are no cards</div>
   )

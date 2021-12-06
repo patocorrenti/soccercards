@@ -7,8 +7,8 @@ import Styles from './Card.module.scss'
 export default function SoccerCard ({ card, id }) {
 
   const cardLink = `/card/${id}`
-  const primaryColor = { backgroundColor: `#${card.team.color_1 || 'fff'}` }
-  const secondaryColor = { backgroundColor: `#${card.team.color_2 || 'fff'}` }
+  const primaryColor = { backgroundColor: `#${card.team.color_1 || '8C8C8C'}` }
+  const secondaryColor = { backgroundColor: `#${card.team.color_2 || 'EEEEEE'}` }
 
   return (
     <article className={Styles.card}>

@@ -11,6 +11,7 @@ export default function SoccerCard ({ card, id }) {
   const primaryColor = { backgroundColor: `#${card.team.color_1 || '8C8C8C'}` }
   const secondaryColor = { backgroundColor: `#${card.team.color_2 || 'EEEEEE'}` }
   const image = `/cards/${card.image}`
+  const teamLogo = card.team.logo ? `/teams/${card.team.logo}` : ''
 
   return (
     <article className={Styles.card}>
@@ -20,6 +21,9 @@ export default function SoccerCard ({ card, id }) {
           <Image src={image} width={290} height={214} alt="Player picture"/>
         </a>
         <div className={Styles.colorpri} style={primaryColor}></div>
+        <div className={Styles.logo}>
+          { teamLogo && <Image src={teamLogo} width={70} height={70} alt="Team logo"/> }
+        </div>
       </div>
       <div className={Styles.data}>
         <header className={Styles.header}>

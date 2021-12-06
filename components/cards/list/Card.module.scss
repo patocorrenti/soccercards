@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .card {
   background-color: #fff;
   border: 1px solid #EEEEEE;
@@ -7,7 +9,7 @@
   width: auto;
 
   .image {
-    overflow: hidden;
+    position: relative;
 
     a {
       display: block;
@@ -29,6 +31,12 @@
     .colorpri {
       height: 10px;
     }
+    .logo {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: -30px;
+    }
   }
   .data {
     background-color: #EEEEEE;
@@ -38,10 +46,17 @@
       text-align: center;
 
       h2 {
-        color: #000000;
         font-size: 1.8rem;
         font-weight: 800;
         margin: 0 0 10px;
+
+        a {
+          color: #000000;
+
+          &:hover {
+            color: $color-site;
+          }
+        }
       }
       .desc {
         font-size: 1.5rem;

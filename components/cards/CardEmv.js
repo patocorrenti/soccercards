@@ -6,6 +6,8 @@ import Styles from './CardEmv.module.scss'
 
 export default function CardEmv ({ emv }) {
 
+  if ( ! emv ) return ( <div>No EMV data</div> )
+
   const evoStyle = getEvolutionStyle( emv.evolution );
 
   return (

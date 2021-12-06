@@ -6,16 +6,18 @@ export default function SoccerCard ({ card }) {
   return (
     <article className={Styles.card}>
       <div className={Styles.data}>
-        <h2>{card.name}</h2>
-        <div className={Styles.desc}>
-          { ! card.deliver_date ? card.excerpt : 'Random card waiting to be delivered' }
-        </div>
-        <div>
+        <header className={Styles.header}>
+          <h2>{card.name}</h2>
+          <div className={Styles.desc}>
+            { ! card.deliver_date ? card.excerpt : 'Random card waiting to be delivered' }
+          </div>
+        </header>
+        <footer className={Styles.footer}>
           <div className={Styles.team}>
             { ( card.team.name && card.year ) && `${card.year} - ${card.team.name} ` }
           </div>
           <CardEmv emv={card.value} />
-        </div>
+        </footer>
       </div>
     </article>
   )

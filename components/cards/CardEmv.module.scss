@@ -1,0 +1,16 @@
+.emv {
+  background-color: #fff;
+  border: 1px solid #eee;
+  font-size: 1.4rem;
+  margin-bottom: -8px;
+  margin-right: -9px;
+  padding: 9px;
+
+  .legend {
+    font-size: 1.2rem;
+  }
+  .value {
+    color: #000;
+    font-weight: bold;
+  }
+}

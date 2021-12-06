@@ -1,9 +1,7 @@
-import UtilStyles from '../../styles/utils.module.scss'
 import Styles from './Layout.module.scss'
 import DocumentHead from './DocumentHead'
 import Header from './Header'
 import SectionHeader from './SectionHeader'
-
 
 export default function Layout ({ children, title, showTitle }) {
   return (
@@ -11,12 +9,12 @@ export default function Layout ({ children, title, showTitle }) {
       <DocumentHead title={title} />
       <div className={Styles.layout}>
         <Header />
-        <div className={Styles.content}>
+        <main className={Styles.main}>
           <SectionHeader showTitle={showTitle} />
-          <div className={UtilStyles.container}>
+          <div className={Styles.content}>
             {children}
           </div>
-        </div>
+        </main>
       </div>
     </>
   )

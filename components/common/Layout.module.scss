@@ -1,9 +1,18 @@
 @import '../../styles/variables';
 
 .layout {
+  width: 100%;
+
+  .content {
+    padding: 28px 16px;
+  }
+
   @media screen and (min-width: $desktop) {
-    .content {
+    .main {
       margin-left: 70px;
+    }
+    .content {
+      padding: 31px 27px;
     }
   }
 }

@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .emv {
   background-color: #fff;
   border: 1px solid #eee;
@@ -9,8 +11,32 @@
   .legend {
     font-size: 1.2rem;
   }
+  .ethsym {
+    padding: 0 3px;
+  }
   .value {
     color: #000;
+
+    &.up {
+      color: $color-green;
+    }
+    &.down {
+      color: $color-red;
+    }
+  }
+  .price {
+    display: inline-block;
     font-weight: bold;
+    text-align: right;
+    width: 4ch;
+  }
+  .evolution {
+    display: inline-block;
+    text-align: right;
+    width: 1ch;
+
+    &.delete {
+      background: red;
+    }
   }
 }

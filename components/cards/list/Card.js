@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import CardImage from '../CardImage'
-import CardEmv from './CardEmv'
+import CardEmv from '../CardEmv'
 
 import Styles from './Card.module.scss'
 

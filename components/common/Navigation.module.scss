@@ -31,6 +31,7 @@
       transition-duration: .3s;
 
       &:hover, &.active {
+        color: #fff;
         opacity: 1;
       }
       .icon {

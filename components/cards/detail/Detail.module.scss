@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+.detail {
+  .dataDesk {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    .dataMobile {
+      display: none;
+    }
+    .dataDesk {
+      display: block;
+    }
+    .deskLeft {
+      width: 346px;
+    }
+    .deskRight {
+
+    }
+  }
+}

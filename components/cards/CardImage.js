@@ -17,7 +17,7 @@ export default function CardImage ({ card, id, size }) {
   const teamLogoSize = size === 'big' ? 98 : 70
 
   return (
-    <div className={Styles.image}>
+    <div className={Styles.image} style={{maxWidth: imageSize[ 0 ]}}>
       { size !== 'big' && <div className={Styles.colorsec} style={secondaryColor}></div> }
       { cardLink ? <a href={cardLink}>{ image }</a> : image }
       <div className={Styles.colorpri} style={primaryColor}></div>

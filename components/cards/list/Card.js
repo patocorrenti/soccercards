@@ -31,7 +31,9 @@ export default function SoccerCard ({ card, id }) {
           <div className={Styles.team}>
             { ( card.team.name && card.year ) && `${card.year} - ${card.team.name} ` }
           </div>
-          <CardEmv emv={card.value} />
+          <div className={Styles.emv}>
+            <CardEmv emv={card.value} />
+          </div>
         </footer>
       </div>
     </article>

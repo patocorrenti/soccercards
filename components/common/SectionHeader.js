@@ -1,11 +1,14 @@
 import Breadcrumb from './Breadcrumb'
 import Styles from './SectionHeader.module.scss'
 
-export default function SectionHeader ({ showTitle, breadCrumb }) {
+export default function SectionHeader ({ showTitle, breadCrumb, color }) {
   return (
-    <header className={Styles.header}>
-      {showTitle && <h1>{showTitle}</h1>}
-      { breadCrumb && <Breadcrumb data={breadCrumb} /> }
-    </header>
+    <>
+      <header className={Styles.header}>
+        { showTitle && <h1>{showTitle}</h1> }
+        { breadCrumb && <Breadcrumb data={breadCrumb} /> }
+      </header>
+      { color && <div style={{backgroundColor: `#${color}`}} className={Styles.colorBar}></div> }
+    </>
   )
 }

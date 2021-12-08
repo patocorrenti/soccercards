@@ -12,11 +12,12 @@ export default function PurchaseData ({ data }) {
 
   return (
     <section className={`${Styles.purchaseData} ${ open ? Styles.open : '' }`} >
-      <header>
+      <header className={Styles.header}>
         <div>Purchased on { data.date }</div>
         <ButtonExpand expanded={ open } onclick={ () => setOpen( ! open ) } />
       </header>
       <div className={Styles.detail}>
+        <div>Price paid: { data.paid }</div>
         <div>Delivered in { data.wallet }</div>
         <br />
         <div>

@@ -21,9 +21,13 @@ export default function SoccerCardDetail ({ card }) {
             <CardImage card={card} size='big' />
           </div>
           <div className={`${Styles.dataMobile} ${ dummyText ? Styles.open : '' }`}>
-            <h2 className={Styles.title}>{card.name}</h2>
+            <h2 className={Styles.title}>
+              {card.name}
+            </h2>
             <div className={Styles.excerpt}>
-              {card.excerpt}
+              <div className={Styles.text}>
+                {card.excerpt}
+              </div>
               <ButtonExpand expanded={ dummyText } onclick={ () => setDummyText( ! dummyText ) } />
             </div>
             <div className={Styles.DummyText}>

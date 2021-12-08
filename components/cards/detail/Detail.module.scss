@@ -4,12 +4,28 @@
   margin-top: -28px;
 
   .dataMobile {
+    margin-bottom: 30px;
+    padding: 0 10px;
+
+    .excerpt {
+      align-items: flex-start;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+
+      .text:after {
+        content: '..'
+      }
+    }
     .DummyText {
       display: none;
     }
     &.open {
       .DummyText {
         display: block;
+      }
+      .excerpt .text:after {
+        display: none;
       }
     }
   }
@@ -26,10 +42,7 @@
   .title {
     color: #000;
     font-weight: bold;
-  }
-  .excerpt {
-    align-items: flex-start;
-    display: flex;
+    font-size: 2rem;
   }
   .emv {
     background-color: #fff;

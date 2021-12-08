@@ -1,8 +1,19 @@
+@import '../../../styles/variables';
+
 .purchaseData {
   background-color: #fff;
+  color: #000;
+  margin-bottom: 2px;
   padding: 10px;
-  
+
+  .header {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
   .detail {
+    color: $color-normal-text;
     display: none;
   }
   &.open {

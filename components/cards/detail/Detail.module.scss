@@ -73,23 +73,27 @@
     }
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $desktop-l) {
     display: flex;
+    gap: 30px;
     margin-top: -31px;
 
+    .title {
+      padding-top: 5px;
+      font-size: 2.4rem;
+    }
     .dataMobile {
       display: none;
     }
     .dataDesk {
       display: block;
+      margin-bottom: 40px;
     }
     .deskLeft {
+      flex-shrink: 0;
       margin: 0;
       max-width: none;
       width: 346px;
-    }
-    .deskRight {
-      flex-grow: 1;
     }
     .image {
       margin-top: -45px;

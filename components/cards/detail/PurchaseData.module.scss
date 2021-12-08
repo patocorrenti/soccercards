@@ -1,0 +1,13 @@
+.purchaseData {
+  background-color: #fff;
+  padding: 10px;
+  
+  .detail {
+    display: none;
+  }
+  &.open {
+    .detail {
+      display: block;
+    }
+  }
+}

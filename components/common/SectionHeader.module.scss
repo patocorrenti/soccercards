@@ -5,6 +5,10 @@
   padding: 35px 0 20px;
   text-align: center;
 
+  &.detailView {
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
   h1 {
     font-size: 2rem;
     margin: 0;
@@ -22,6 +26,11 @@
     min-height: 104px;
     padding: 15px 15px 15px 55px;
     text-align: left;
+
+    &.detailView {
+      padding-top: 45px;
+      padding-bottom: 105px;
+    }
   }
 }
 

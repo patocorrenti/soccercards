@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFutbol, faStore, faQuestion } from '@fortawesome/free-solid-svg-icons';
-import { faIdBadge } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFutbol, faStore, faQuestion } from '@fortawesome/free-solid-svg-icons'
+import { faIdBadge } from '@fortawesome/free-regular-svg-icons'
 
 import Styles from './Navigation.module.scss'
 

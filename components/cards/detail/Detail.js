@@ -1,62 +1,54 @@
+import { useState } from 'react'
+
 import CardImage from '../CardImage'
+import ButtonExpand from '../../common/ButtonExpand'
 import PurchaseData from './PurchaseData'
 import CardEmv from '../CardEmv'
 import SoccerCardsSlider from './CardsSlider'
+import DummyText from './DummyText'
 
 import Styles from './Detail.module.scss'
 
 export default function SoccerCardDetail ({ card }) {
+  
+  const [ dummyText, setDummyText ] = useState( false )
+
   return (
     <article className={Styles.detail}>
       <div className={Styles.deskLeft}>
         <div className={Styles.data}>
-          <CardImage card={card} size='big' />
-          <div className={Styles.dataMobile}>
-            <h2>{card.name}</h2>
-            <div>{card.excerpt}</div>
-            <div>
-              <p>
-                Simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s when an unknown printer took.
-              </p>
-              <p>
-                Mauris mattis leo nec lectus porta congue.
-                Quisque id quam at velit elementum blandit sit amet id tortor.
-                Proin convallis dui at magna pharetra aliquam ac nec nunc.
-                Nullam fringilla eleifend risus, et porta elit gravida quis.
-              </p>
+          <div className={Styles.image}>
+            <CardImage card={card} size='big' />
+          </div>
+          <div className={`${Styles.dataMobile} ${ dummyText ? Styles.open : '' }`}>
+            <h2 className={Styles.title}>{card.name}</h2>
+            <div className={Styles.excerpt}>
+              {card.excerpt}
+              <ButtonExpand expanded={ dummyText } onclick={ () => setDummyText( ! dummyText ) } />
+            </div>
+            <div className={Styles.DummyText}>
+              <DummyText />
             </div>
           </div>
         </div>
         <PurchaseData data={card.purchase} />
-        <div>
+        <div className={Styles.emv}>
           <div>
             <div>Estimated Market Value</div>
             <div>(Based on similar items recently traded)</div>
           </div>
           <CardEmv emv={card.value} />
         </div>
-        <div>
-          <a href="#">Trade</a>
-          <a href="#">Publish</a>
+        <div className={Styles.actions}>
+          <a href="#" className="button">Trade</a>
+          <a href="#" className="button">Publish</a>
         </div>
       </div>
       <div className={Styles.deskRight}>
         <div className={Styles.dataDesk}>
-          <h2>{card.name}</h2>
-          <div>{card.excerpt}</div>
-          <p>
-            Simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s when an unknown printer took.
-          </p>
-          <p>
-            Mauris mattis leo nec lectus porta congue.
-            Quisque id quam at velit elementum blandit sit amet id tortor.
-            Proin convallis dui at magna pharetra aliquam ac nec nunc.
-            Nullam fringilla eleifend risus, et porta elit gravida quis.
-          </p>
+          <h2 className={Styles.title}>{card.name}</h2>
+          <div className={Styles.excerpt}>{card.excerpt}</div>
+          <DummyText />
         </div>
         <section>
           <h3>Similar items for sale</h3>

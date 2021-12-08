@@ -1,12 +1,53 @@
 @import '../../../styles/variables';
 
 .detail {
+  margin-top: -28px;
+
+  .dataMobile {
+    .DummyText {
+      display: none;
+    }
+    &.open {
+      .DummyText {
+        display: block;
+      }
+    }
+  }
   .dataDesk {
     display: none;
+  }
+  .image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -65px;
+    margin-bottom: 50px;
+  }
+  .title {
+    color: #000;
+    font-weight: bold;
+  }
+  .excerpt {
+    align-items: flex-start;
+    display: flex;
+  }
+  .emv {
+    background-color: #fff;
+    padding: 10px;
+  }
+  .actions {
+    display: flex;
+    gap: 10px;
+
+    :global .button {
+      flex-grow: 1;
+    }
   }
 
   @media screen and (min-width: $desktop) {
     display: flex;
+    margin-top: -31px;
+
     .dataMobile {
       display: none;
     }
@@ -17,7 +58,10 @@
       width: 346px;
     }
     .deskRight {
-
+      flex-grow: 1;
+    }
+    .image {
+      margin-top: -45px;
     }
   }
 }

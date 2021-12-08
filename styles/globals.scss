@@ -40,7 +40,7 @@ a {
   transition-duration: .4s;
 
   &:hover {
-    background-color: #000;
+    background-color: $color-site-dark;
     color: #fff;
   }
 }

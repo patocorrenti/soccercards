@@ -32,6 +32,10 @@
   .dataDesk {
     display: none;
   }
+  .deskLeft {
+    max-width: 500px;
+    margin: 0 auto;
+  }
   .image {
     align-items: center;
     display: flex;
@@ -45,8 +49,20 @@
     font-size: 2rem;
   }
   .emv {
-    background-color: #fff;
+    align-items: center;
+    background-color: $color-light-gray;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 10px;
     padding: 10px;
+
+    .emv_title {
+      color: #000;
+    }
+    .emv_tooltip {
+      font-size: 1.2rem;
+    }
   }
   .actions {
     display: flex;
@@ -68,6 +84,8 @@
       display: block;
     }
     .deskLeft {
+      margin: 0;
+      max-width: none;
       width: 346px;
     }
     .deskRight {

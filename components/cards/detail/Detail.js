@@ -10,7 +10,7 @@ import DummyText from './DummyText'
 import Styles from './Detail.module.scss'
 
 export default function SoccerCardDetail ({ card }) {
-  
+
   const [ dummyText, setDummyText ] = useState( false )
 
   return (
@@ -38,8 +38,12 @@ export default function SoccerCardDetail ({ card }) {
         <PurchaseData data={card.purchase} />
         <div className={Styles.emv}>
           <div>
-            <div>Estimated Market Value</div>
-            <div>(Based on similar items recently traded)</div>
+            <div className={Styles.emv_title}>
+              Estimated Market Value
+              </div>
+            <div className={Styles.emv_tooltip}>
+              (Based on similar items recently traded)
+              </div>
           </div>
           <CardEmv emv={card.value} />
         </div>

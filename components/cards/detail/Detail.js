@@ -4,7 +4,7 @@ import CardImage from '../CardImage'
 import ButtonExpand from '../../common/ButtonExpand'
 import PurchaseData from './PurchaseData'
 import CardEmv from '../CardEmv'
-import SoccerCardsSlider from './CardsSlider'
+import SimilarItems from './SimilarItems'
 import DummyText from './DummyText'
 
 import Styles from './Detail.module.scss'
@@ -58,10 +58,9 @@ export default function SoccerCardDetail ({ card }) {
           <div className={Styles.excerpt}>{card.excerpt}</div>
           <DummyText />
         </div>
-        <section>
-          <h3>Similar items for sale</h3>
-          <SoccerCardsSlider />
-        </section>
+        <div className={Styles.similarItems}>
+          <SimilarItems />
+        </div>
       </div>
     </article>
   )

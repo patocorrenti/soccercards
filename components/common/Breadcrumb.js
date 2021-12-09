@@ -3,9 +3,9 @@ import Styles from './Breadcrumb.module.scss'
 
 export default function Breadcrumb ({ data }) {
   return (
-    <div className={Styles.breadcrumb}>
+    <section className={Styles.breadcrumb}>
       {data.map( ( link, index ) => getLink( link, index ) )}
-    </div>
+    </section>
   )
 }
 
@@ -15,5 +15,5 @@ function getLink ( link, index ) {
           <Link href={link[ 1 ]}><a>{link[ 0 ]}</a></Link>
           &nbsp;>&nbsp;
         </span>
-      : <span className={Styles.current} key={index}>{link[ 0 ]}</span>
+      : <span className={Styles.current} key={index} title={link[ 0 ]}>{link[ 0 ]}</span>
 }

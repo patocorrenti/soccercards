@@ -6,7 +6,7 @@ export default function DocumentHead ({ title }) {
   return (
     <Fragment>
       <GoogleFonts
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       />
       <Head>
         <title>

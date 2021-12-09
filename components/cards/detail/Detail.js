@@ -36,7 +36,7 @@ export default function SoccerCardDetail ({ card }) {
           </div>
         </div>
         <PurchaseData data={card.purchase} />
-        <div className={Styles.emv}>
+        <section className={Styles.emv}>
           <div>
             <div className={Styles.emv_title}>
               Estimated Market Value
@@ -46,7 +46,7 @@ export default function SoccerCardDetail ({ card }) {
               </div>
           </div>
           <CardEmv emv={card.value} />
-        </div>
+        </section>
         <div className={Styles.actions}>
           <a href="#" className="button">Trade</a>
           <a href="#" className="button">Publish</a>

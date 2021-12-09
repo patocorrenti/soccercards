@@ -38,6 +38,7 @@ export default function CardImage ({ card, id, size }) {
 
 function getImage(image, imageSize) {
   return (
+    image &&
     <Image
       src={image}
       width={imageSize[ 0 ]}

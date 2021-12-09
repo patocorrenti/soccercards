@@ -28,27 +28,10 @@
     right: 0;
     bottom: -30px;
   }
-  .deliver {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .delivery {
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-
-    .question {
-      background-color: #eee;
-      border-radius: 100%;
-      font-size: 65px;
-      margin-bottom: 20px;
-      padding: 8px;
-    }
-    .date{
-      color: #000;
-      font-size: 1.6rem;
-      font-weight: bold;
-    }
   }
 }

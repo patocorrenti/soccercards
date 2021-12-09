@@ -7,7 +7,7 @@ import Styles from './Card.module.scss'
 
 export default function SoccerCard ({ card, id }) {
 
-  const cardLink = `/card/${id}`
+  const cardLink = id ? `/card/${id}` : ''
   const primaryColor = { backgroundColor: `#${card?.team.color_1 || '8C8C8C'}` }
   const secondaryColor = { backgroundColor: `#${card?.team.color_2 || 'EEEEEE'}` }
   const image = `/cards/${card.image}`
@@ -19,9 +19,11 @@ export default function SoccerCard ({ card, id }) {
       <div className={Styles.data}>
         <header className={Styles.header}>
           <h2>
-            <Link href={cardLink}>
-              {card.name}
-            </Link>
+            {
+              cardLink
+                ? <Link href={cardLink}>{card.name}</Link>
+                : card.name
+            }
           </h2>
           <div className={Styles.desc}>
             { ! card.deliver_date ? card.excerpt : 'Random card waiting to be delivered' }
